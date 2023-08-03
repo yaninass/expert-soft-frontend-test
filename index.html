@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        .image-frame {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .right-text {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: black;
+            background-color: pink;
+            padding: 5px;
+            font-size: 35px;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .bottom-text {
+            color: transparent;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            bottom: 70%;
+            transform: translate(-50%, 50%);
+            transition: color 0.3s ease;
+        }
+
+        .image-frame:hover img {
+            transform: scale(1.2);
+        }
+
+        .image-frame:hover .overlay {
+            opacity: 1;
+        }
+
+        .image-frame:hover .bottom-text {
+            color: white;
+        }
+
+        .center-text {
+            text-align: center;
+            font-family: Broadway;
+            display: block;
+            font-size: 20px;
+            color: black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body bgcolor="LightSalmon">
+
+<div class="image-frame">
+    <img src="https://diskontsp.ru/wa-data/public/shop/products/18/06/60618/images/55149/55149.750x0.jpg" alt="Image 1">
+    <span class="right-text">Sale</span>
+    <div class="overlay">
+        <span class="bottom-text">Купить сейчас</span>
+    </div>
+    <div class="center-text">
+        <b>Крем для лица </b>Babor<br><s>19.99$</s> 10$
+    </div>
+</div>
+
+<div class="image-frame">
+    <img src="https://veneracosmetics.ru/image/cache/catalog/3803d3794d0c11eb920b8c89a5a6d1ba_c4217017d1c711eb96f0309c230027ed-1000x1340.jpg" alt="Image 2">
+    <span class="right-text">Sale</span>
+    <div class="overlay">
+        <span class="bottom-text">Купить сейчас</span>
+    </div>
+    <div class="center-text">
+        <b>Крем для лица</b> All clean<br><s>19.99$</s> 10$
+    </div>
+</div>
+
+<div class="image-frame">
+    <img src="https://i4.stat01.com/2/1677/116767752/afacdb/klapp-krem-lifting-den-noch-x-treme-lifting-cream-day-night-50-ml.jpg" alt="Image 3">
+    <span class="right-text">Sale</span>
+    <div class="overlay">
+        <span class="bottom-text">Купить сейчас</span>
+    </div>
+    <div class="center-text">
+        <b>Крем для лица</b> Klapp<br><s>19.99$</s> 10$
+    </div>
+</div>
+
+</body>
+</html>
